@@ -22,14 +22,6 @@
   <?php endif; ?>
   <?php print render($title_suffix); ?>
 
-  <?php if ($display_submitted): ?>
-    <div class="submitted">
-      <?php
-        print t('Submitted by !username on !datetime',
-          array('!username' => $name, '!datetime' => $date));
-      ?>
-    </div>
-  <?php endif; ?>
 
   <div class="content"<?php print $content_attributes; ?>>
     <?php

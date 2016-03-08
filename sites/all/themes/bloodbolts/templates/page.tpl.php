@@ -113,7 +113,7 @@
     <?php endif; ?>
   </div>
 </header>
-<div class="main-container <?php print $container_class; ?>">
+<div class="<?php print $container_class; ?> hero-container">
   <div class="row">
     <header role="banner" id="page-header">
       <?php if (!empty($site_slogan)): ?>
