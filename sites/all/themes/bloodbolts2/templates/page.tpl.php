@@ -113,7 +113,7 @@
     <?php endif; ?>
   </div>
 </header>
-<div class="main-container <?php print $container_class; ?>">
+<div class="main-container top <?php print $container_class; ?>">
   <div class="row">
     <header role="banner" id="page-header">
       <?php if (!empty($site_slogan)): ?>
@@ -124,7 +124,7 @@
     </header> <!-- /#page-header -->
   </div>
 </div>
-<div class="main-container <?php print $container_class; ?>">
+<div class="main-container content <?php print $container_class; ?>">
 
   <div class="row">
 

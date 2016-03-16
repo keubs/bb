@@ -7503,7 +7503,7 @@ header.navbar-inverse.navbar {
   padding: 0 139px;
 }
 .main-container {
-  max-width: 834px;
+  max-width: 802px;
 }
 /*=====  End of Global Styles  ======*/
 /*=======================================
@@ -7524,16 +7524,13 @@ header.navbar-inverse.navbar {
 /*====================================
 =            Journal View            =
 ====================================*/
-.view-journal .views-row {
-  margin-bottom: 17px;
-}
 .view-journal .views-row.default {
-  width: 48%;
+  width: 50%;
 }
 .view-journal .views-row.wide {
   width: 100%;
 }
 .view-journal .views-row.tall {
-  width: 48%;
+  width: 50%;
 }
 /*=====  End of Journal View  ======*/
