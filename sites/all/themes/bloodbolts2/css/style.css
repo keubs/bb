@@ -7504,15 +7504,14 @@ header.navbar-inverse.navbar {
 }
 .main-container {
   max-width: 834px;
+  padding: 0;
 }
 /*=====  End of Global Styles  ======*/
 /*=======================================
-=            Homepage Stylse            =
+=            Homepage Styles            =
 =======================================*/
 .hero-container {
   width: 100%;
-  max-height: 550px;
-  overflow: hidden;
 }
 /*#block-nodeblock-125,
 #block-nodeblock-124,
@@ -7520,20 +7519,78 @@ header.navbar-inverse.navbar {
     width: 50%;
     float:left;
 }*/
-/*=====  End of Homepage Stylse  ======*/
+/*=====  End of Homepage Styles  ======*/
 /*====================================
 =            Journal View            =
 ====================================*/
 .view-journal .views-row {
   margin-bottom: 17px;
 }
+.view-journal .views-row img {
+  width: 100%;
+}
 .view-journal .views-row.default {
-  width: 48%;
+  width: 49%;
 }
 .view-journal .views-row.wide {
   width: 100%;
 }
 .view-journal .views-row.tall {
-  width: 48%;
+  width: 49%;
 }
 /*=====  End of Journal View  ======*/
+/*==========================================
+=            Homepage Slideshow            =
+==========================================*/
+.view-homepage-banner .views-row {
+  position: relative;
+}
+.view-homepage-banner .views-field-title {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  padding-top: 190px;
+}
+.view-homepage-banner .views-field-title span.field-content {
+  display: block;
+  width: 500px;
+  margin: 0 auto;
+}
+.view-homepage-banner .views-field-title span.field-content a {
+  color: #FFF;
+  font-size: 60px;
+}
+.view-homepage-banner img {
+  margin: 0 auto;
+  width: 100%;
+}
+/*=====  End of Homepage Slideshow  ======*/
+/*=====================================
+=            Taxonomy menu            =
+=====================================*/
+#block-menu-block-1 {
+  max-width: 834px;
+  margin: 0 auto;
+  padding: 0;
+}
+.menu-name-menu-page-types ul {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+.menu-name-menu-page-types ul li {
+  display: inline-block;
+}
+/*=====  End of Taxonomy menu  ======*/
+/*=======================================
+=            Manifesto block            =
+=======================================*/
+#block-block-2 {
+  max-width: 834px;
+  text-align: center;
+  margin: 20px auto 10px;
+  display: block;
+  padding: 100px 20px 20px;
+  background: url(images/manifesto-logo.png) center top no-repeat;
+}
+/*=====  End of Manifesto block  ======*/
