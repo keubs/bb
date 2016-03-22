@@ -9,8 +9,8 @@
         $('.view-journal').masonry({
             itemSelector: '.views-row',
             percentPosition: true,
-            gutter: 17,
-            columnWidth: 390,
+            gutter: '.gutter-sizer',
+            columnWidth: '.grid-sizer',
         });
 
 
