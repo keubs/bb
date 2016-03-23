@@ -6,7 +6,7 @@
     });
 
     $(window).load(function(){
-        $('.view-journal').masonry({
+        $('.view-journal .view-content').masonry({
             itemSelector: '.views-row',
             percentPosition: true,
             gutter: '.gutter-sizer',
