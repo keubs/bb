@@ -9,6 +9,10 @@
  */
  * { box-sizing: border-box; }
 
+
+/*----------  Subsection comment block  ----------*/
+
+
 /*=======================================
 =            Global Styles            =
 =======================================*/
@@ -21,7 +25,7 @@ header.navbar-inverse.navbar {
 
 
 .main-container {
-    max-width: 834px;
+    max-width: 1080px;
     padding: 0;
 }
 /*=====  End of Global Styles  ======*/
@@ -42,6 +46,8 @@ header.navbar-inverse.navbar {
 =            Journal View            =
 ====================================*/
 .view-journal {
+    padding: 0 139px;
+
     .views-row {
         width: 49%;
         margin-bottom: 12px;
@@ -81,6 +87,18 @@ header.navbar-inverse.navbar {
         width: 2%;
     }
 
+    .view-footer {
+
+        a {
+            text-align: center;
+            display: block;
+            border: solid 2px #1e1e1e;
+            padding: 15px 25px;
+            margin: 20px auto;
+            width: 150px;
+            color: #1e1e1e;
+        }
+    }
 }
 /*=====  End of Journal View  ======*/
 
@@ -163,9 +181,10 @@ header.navbar-inverse.navbar {
 =======================================*/
 
 .homepage-block {
-    min-height: 230px;
+    min-height: 298px;
     background-size: 50%;
     background-repeat: no-repeat;
+    text-align: center;
     &.right {
         padding-left: 50%;
         background-position: left top;
@@ -179,16 +198,95 @@ header.navbar-inverse.navbar {
     &.winter-lookbook {
         background-image: url(images/winter-lookbook-block-bg.jpg);
         background-color: #f1f1f1;
+
+        h2 {
+            background: url(images/lookbook-icon.png) no-repeat top center;
+            background-position-y: 35px;
+            background-size: 25%;
+        }
     }
 
     &.featured-products {
         background-image: url(images/featured-products-block-bg.jpg);
         background-color: #f1f1f1;
+
+        h2 {
+            background: url(images/featured-products-icon.png) no-repeat top center;
+            background-position-y: 35px;
+            background-size: 25%;
+        }
     }
 
     &.our-transparency {
         background-image: url(images/transparency-block-bg.jpg);
+
+        h2 {
+            background: url(images/transparency-icon.png) no-repeat top center;
+            background-position-y: 55px;
+            background-size: 15%;
+        }
+    }
+
+    h2 {
+        font-size: 15px;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding-top: 120px;
+        display: block;
+        padding-bottom: 1em;
+
+    }
+    p {
+        display: block;
+    }
+
+    h2, p {
+        width: 250px;
+        margin: 0 auto;
+    }
+
+    a {
+        padding-top: 2em;
+        display: block;
     }
 }
 
 /*=====  End of Homepage Blocks  ======*/
+
+
+/*==============================
+=            Footer            =
+==============================*/
+
+footer.footer {
+
+    .block {
+        display: inline-block;
+        padding-left: 15px;
+        max-width: 240px;
+        min-width: 18%;
+        float: left;
+    }
+
+    h2.block-title {
+        font-size: 18px;
+        font-weight: bold;
+
+    }
+
+    .block:first-child h2.block-title {
+        margin: 20px 0 10px;
+    }
+
+    ul.menu {
+        li > a {
+            margin: 0;
+            padding: 0;
+            color: #969696;
+        }
+    }
+}
+
+
+/*=====  End of Footer  ======*/
+

@@ -7497,6 +7497,7 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
 * {
   box-sizing: border-box;
 }
+/*----------  Subsection comment block  ----------*/
 /*=======================================
 =            Global Styles            =
 =======================================*/
@@ -7506,7 +7507,7 @@ header.navbar-inverse.navbar {
   padding: 0 139px;
 }
 .main-container {
-  max-width: 834px;
+  max-width: 1080px;
   padding: 0;
 }
 /*=====  End of Global Styles  ======*/
@@ -7520,6 +7521,9 @@ header.navbar-inverse.navbar {
 /*====================================
 =            Journal View            =
 ====================================*/
+.view-journal {
+  padding: 0 139px;
+}
 .view-journal .views-row {
   width: 49%;
   margin-bottom: 12px;
@@ -7547,6 +7551,15 @@ header.navbar-inverse.navbar {
 }
 .view-journal .gutter-sizer {
   width: 2%;
+}
+.view-journal .view-footer a {
+  text-align: center;
+  display: block;
+  border: solid 2px #1e1e1e;
+  padding: 15px 25px;
+  margin: 20px auto;
+  width: 150px;
+  color: #1e1e1e;
 }
 /*=====  End of Journal View  ======*/
 /*==========================================
@@ -7608,9 +7621,10 @@ header.navbar-inverse.navbar {
 =            Homepage Blocks            =
 =======================================*/
 .homepage-block {
-  min-height: 230px;
+  min-height: 298px;
   background-size: 50%;
   background-repeat: no-repeat;
+  text-align: center;
 }
 .homepage-block.right {
   padding-left: 50%;
@@ -7624,11 +7638,69 @@ header.navbar-inverse.navbar {
   background-image: url(images/winter-lookbook-block-bg.jpg);
   background-color: #f1f1f1;
 }
+.homepage-block.winter-lookbook h2 {
+  background: url(images/lookbook-icon.png) no-repeat top center;
+  background-position-y: 35px;
+  background-size: 25%;
+}
 .homepage-block.featured-products {
   background-image: url(images/featured-products-block-bg.jpg);
   background-color: #f1f1f1;
 }
+.homepage-block.featured-products h2 {
+  background: url(images/featured-products-icon.png) no-repeat top center;
+  background-position-y: 35px;
+  background-size: 25%;
+}
 .homepage-block.our-transparency {
   background-image: url(images/transparency-block-bg.jpg);
 }
+.homepage-block.our-transparency h2 {
+  background: url(images/transparency-icon.png) no-repeat top center;
+  background-position-y: 55px;
+  background-size: 15%;
+}
+.homepage-block h2 {
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-top: 120px;
+  display: block;
+  padding-bottom: 1em;
+}
+.homepage-block p {
+  display: block;
+}
+.homepage-block h2,
+.homepage-block p {
+  width: 250px;
+  margin: 0 auto;
+}
+.homepage-block a {
+  padding-top: 2em;
+  display: block;
+}
 /*=====  End of Homepage Blocks  ======*/
+/*==============================
+=            Footer            =
+==============================*/
+footer.footer .block {
+  display: inline-block;
+  padding-left: 15px;
+  max-width: 240px;
+  min-width: 18%;
+  float: left;
+}
+footer.footer h2.block-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+footer.footer .block:first-child h2.block-title {
+  margin: 20px 0 10px;
+}
+footer.footer ul.menu li > a {
+  margin: 0;
+  padding: 0;
+  color: #969696;
+}
+/*=====  End of Footer  ======*/
