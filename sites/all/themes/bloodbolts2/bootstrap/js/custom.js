@@ -14,11 +14,11 @@
 
 
         $('.view-journal .views-row').on('mouseenter', function(){
-            $(this).find('.content-wrapper').slideDown('fast');
+            $(this).find('.content-wrapper').addClass('active');
         });
 
         $('.view-journal .views-row').on('mouseleave', function() {
-           $(this).find('.content-wrapper').slideUp('fast'); 
+           $(this).find('.content-wrapper').removeClass('active');
         });
     });
 

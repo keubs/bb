@@ -52,6 +52,7 @@ header.navbar-inverse.navbar {
         width: 49%;
         margin-bottom: 12px;
         float: left;
+        overflow: hidden;
 
         img {
             width: 100%;
@@ -64,11 +65,69 @@ header.navbar-inverse.navbar {
 
         &.wide {
             width: 100%;
+
+            & .content-wrapper {
+                height: 100%;
+                width: 40%;
+                right: -1000px;
+                bottom: 0;
+                &.active {
+                    right: 0;
+                }
+            }
         }
 
         &.tall {
             width: 49%;
+
+            .content-wrapper {
+                height: 40%;
+            }
             // height: 600px;
+        }
+
+        .content-wrapper {
+            position: absolute;
+            bottom: -1000px;
+            color: #1e1e1e;
+            padding: 5px 50px;
+            z-index: 1;
+            height: 300px;
+            text-align: center;
+            &.active {
+                bottom: 0;
+                transition: .2s;
+            }
+
+            .views-field-title {
+                padding: 30px 0 25px 0;
+                    a {
+                    color: #000;
+                    font-size: 15px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
+            }
+
+            .views-field-field-page-link-cta {
+                margin: 30px auto 0;
+
+                a {
+                    padding: 15px 20px;
+                    background: #FFF;
+                    color: #000;
+                }
+            }
+            .opaque {
+                width: 100%;
+                height: 100%;
+                background: #fff;
+                opacity: .73;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                z-index:-1;
+            }
         }
     }
 
@@ -86,6 +145,8 @@ header.navbar-inverse.navbar {
     .gutter-sizer {
         width: 2%;
     }
+
+
 
     .view-footer {
 
@@ -146,6 +207,14 @@ header.navbar-inverse.navbar {
     max-width: 834px;
     margin: 0 auto;
     padding: 0;
+
+    a {
+        color: #979797;
+        padding: 30px 35px 20px;
+        &:hover {
+            color: #be7900;
+        }
+    }
 }
 
 .menu-name-menu-page-types ul {

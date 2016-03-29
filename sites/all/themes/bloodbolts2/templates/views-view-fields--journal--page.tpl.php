@@ -30,7 +30,7 @@
     <?php $style .= strtolower($field_value) == 'default' ? '' : '_' . strtolower($field_value); ?>
     <a href="<?php print drupal_get_path_alias("node/".$row->nid) ?>"><?php print theme('image_style', array('style_name' => $style, 'path' => $row->field_field_page_images[0]['raw']['uri'])); ?></a>
 
-    <div class="content-wrapper" style="position: absolute; bottom: 0; color: #1e1e1e; padding: 5px 10px; z-index: 1; display:none;">
+    <div class="content-wrapper" style="">
         <?php foreach ($fields as $id => $field): ?>
           <?php if (!empty($field->separator)): ?>
             <?php print $field->separator; ?>
@@ -41,6 +41,6 @@
             <?php print $field->content; ?>
           <?php print $field->wrapper_suffix; ?>
         <?php endforeach; ?>
-      <div class="opaque" style="width: 100%; height: 100%; background: #fff; opacity: .73; position: absolute; bottom: 0; left: 0; z-index:-1;"></div>
+      <div class="opaque" style=""></div>
     </div>
 </div>
