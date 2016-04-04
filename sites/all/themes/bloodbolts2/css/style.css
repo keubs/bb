@@ -7497,7 +7497,13 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
 * {
   box-sizing: border-box;
 }
+a:hover {
+  text-decoration: none;
+}
 /*----------  Subsection comment block  ----------*/
+#toolbar div.toolbar-menu {
+  margin-top: 20px;
+}
 /*=======================================
 =            Global Styles            =
 =======================================*/
@@ -7649,11 +7655,11 @@ header.navbar-inverse.navbar {
   margin: 0 auto;
   padding: 0;
 }
-#block-menu-block-1 a {
+#block-menu-block-1 ul.nav a {
   color: #979797;
   padding: 30px 35px 20px;
 }
-#block-menu-block-1 a:hover {
+#block-menu-block-1 ul.nav a:hover {
   color: #be7900;
 }
 .menu-name-menu-page-types ul {
