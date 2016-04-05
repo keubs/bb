@@ -13,6 +13,10 @@
 a:hover {
     text-decoration: none;
 }
+
+img {
+    max-width: 100%;
+}
 /*----------  Subsection comment block  ----------*/
 #toolbar div.toolbar-menu {
     margin-top: 20px;
@@ -167,7 +171,6 @@ header.navbar-inverse.navbar {
     }
 }
 /*=====  End of Journal View  ======*/
-
 
 /*==========================================
 =            Homepage Slideshow            =
@@ -327,6 +330,82 @@ header.navbar-inverse.navbar {
 
 /*=====  End of Homepage Blocks  ======*/
 
+/*===========================================
+=            Details page styles            =
+===========================================*/
+
+body.node-type-page {
+    h1.page-header {
+        font-size: 18px;
+        padding: 35px 0 13px 0;
+        border: 0;
+        margin: 0 0 5px 0;
+    }
+
+    .group-top-portion {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        margin-bottom: 30px;
+    }
+
+    .field-name-field-page-category {
+        .field-item {
+            display: inline-block;
+            padding: 0 15px 20px 0;
+        }
+    }
+}
+
+/*=====  End of Details page styles  ======*/
+
+/*=========================================
+=            Details page view            =
+=========================================*/
+
+.view-details-products-and-pictures {
+    .grid-sizer {
+        width: 49%;
+    }
+
+    .gutter-sizer {
+        width: 2%;
+    }
+
+    .views-row {
+        width: 100%;
+        margin-bottom: 12px;
+        float: left;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+        }
+
+
+        &.default {
+            width: 49%;
+        }
+
+        &.wide {
+            width: 100%;
+        }
+
+        &.tall {
+            width: 49%;
+        }
+
+        .views-field-title {
+            display: none;
+        }
+
+        &.Product .views-field-title {
+            display: block;
+        }
+    }
+}
+
+
+/*=====  End of Details page view  ======*/
 
 /*==============================
 =            Footer            =

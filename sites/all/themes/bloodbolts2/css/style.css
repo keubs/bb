@@ -7500,6 +7500,9 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
 a:hover {
   text-decoration: none;
 }
+img {
+  max-width: 100%;
+}
 /*----------  Subsection comment block  ----------*/
 #toolbar div.toolbar-menu {
   margin-top: 20px;
@@ -7747,6 +7750,59 @@ header.navbar-inverse.navbar {
   display: block;
 }
 /*=====  End of Homepage Blocks  ======*/
+/*===========================================
+=            Details page styles            =
+===========================================*/
+body.node-type-page h1.page-header {
+  font-size: 18px;
+  padding: 35px 0 13px 0;
+  border: 0;
+  margin: 0 0 5px 0;
+}
+body.node-type-page .group-top-portion {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  margin-bottom: 30px;
+}
+body.node-type-page .field-name-field-page-category .field-item {
+  display: inline-block;
+  padding: 0 15px 20px 0;
+}
+/*=====  End of Details page styles  ======*/
+/*=========================================
+=            Details page view            =
+=========================================*/
+.view-details-products-and-pictures .grid-sizer {
+  width: 49%;
+}
+.view-details-products-and-pictures .gutter-sizer {
+  width: 2%;
+}
+.view-details-products-and-pictures .views-row {
+  width: 100%;
+  margin-bottom: 12px;
+  float: left;
+  overflow: hidden;
+}
+.view-details-products-and-pictures .views-row img {
+  width: 100%;
+}
+.view-details-products-and-pictures .views-row.default {
+  width: 49%;
+}
+.view-details-products-and-pictures .views-row.wide {
+  width: 100%;
+}
+.view-details-products-and-pictures .views-row.tall {
+  width: 49%;
+}
+.view-details-products-and-pictures .views-row .views-field-title {
+  display: none;
+}
+.view-details-products-and-pictures .views-row.Product .views-field-title {
+  display: block;
+}
+/*=====  End of Details page view  ======*/
 /*==============================
 =            Footer            =
 ==============================*/

@@ -25,7 +25,6 @@
  */
 ?>
 <div style="position: relative">
-    <?php $row->field_field_page_list_layout[0]['rendered']['#markup'] ?>
     <?php $style = 'node_list'; $field_value = $row->field_field_page_list_layout[0]['rendered']['#markup']?>
     <?php $style .= strtolower($field_value) == 'default' ? '' : '_' . strtolower($field_value); ?>
     <a href="<?php print drupal_get_path_alias("node/".$row->nid) ?>"><?php print theme('image_style', array('style_name' => $style, 'path' => $row->field_field_page_images[0]['raw']['uri'])); ?></a>
