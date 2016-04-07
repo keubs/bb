@@ -7491,6 +7491,9 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
 #navbar-administration.navbar-oriented .navbar-tray-vertical {
   width: 24rem;
 }
+#caret:after {
+  content: " \203a";
+}
 /**
  * Place your custom styles here.
  */
@@ -7623,6 +7626,10 @@ header.navbar-inverse.navbar ul.navbar-nav li.item-right {
   padding: 15px 20px;
   background: #FFF;
   color: #000;
+  text-transform: uppercase;
+}
+.view-journal .views-row .content-wrapper .views-field-field-page-link-cta a:after {
+  content: " \203a";
 }
 .view-journal .views-row .content-wrapper .opaque {
   width: 100%;
@@ -7651,8 +7658,12 @@ header.navbar-inverse.navbar ul.navbar-nav li.item-right {
   border: solid 2px #1e1e1e;
   padding: 15px 25px;
   margin: 20px auto;
-  width: 150px;
+  width: 155px;
   color: #1e1e1e;
+  text-transform: uppercase;
+}
+.view-journal .view-footer a:after {
+  content: " \203a";
 }
 /*=====  End of Journal View  ======*/
 /*==========================================
@@ -7786,6 +7797,12 @@ header.navbar-inverse.navbar ul.navbar-nav li.item-right {
 .homepage-block a {
   padding-top: 2em;
   display: block;
+  color: #333;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+.homepage-block a:after {
+  content: " \203a";
 }
 /*=====  End of Homepage Blocks  ======*/
 /*===========================================

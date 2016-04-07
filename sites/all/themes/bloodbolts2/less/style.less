@@ -10,6 +10,12 @@
 
 
 @orange: #be7900;
+
+#caret {
+    &:after {
+        content: " \203a";
+    }
+}
 /**
  * Place your custom styles here.
  */
@@ -170,6 +176,8 @@ header.navbar-inverse.navbar {
                     padding: 15px 20px;
                     background: #FFF;
                     color: #000;
+                    text-transform: uppercase;
+                    #caret;
                 }
             }
             .opaque {
@@ -210,8 +218,10 @@ header.navbar-inverse.navbar {
             border: solid 2px #1e1e1e;
             padding: 15px 25px;
             margin: 20px auto;
-            width: 150px;
+            width: 155px;
             color: #1e1e1e;
+            text-transform: uppercase;
+            #caret;
         }
     }
 }
@@ -378,6 +388,10 @@ header.navbar-inverse.navbar {
     a {
         padding-top: 2em;
         display: block;
+        color: #333;
+        text-decoration: underline;
+        text-transform: uppercase;
+        #caret;
     }
 }
 
