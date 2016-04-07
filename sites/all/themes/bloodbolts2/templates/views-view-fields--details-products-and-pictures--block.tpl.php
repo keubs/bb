@@ -26,12 +26,16 @@
 ?>
 <div style="position: relative">
     <?php if (isset($row->field_field_image_list_layout[0])) : ?>
-        <?php $style = 'node_list'; $field_value = $row->field_field_image_list_layout[0]['rendered']['#markup']?>
-        <?php $style .= strtolower($field_value) == 'default' ? '' : '_' . strtolower($field_value); ?>
+            <?php
+                $style = 'node_list';
+                $field_value = $row->field_field_image_list_layout[0]['rendered']['#markup']
+            ?>
+            <?php $style .= strtolower($field_value) == 'default' ? '' : '_' . strtolower($field_value); ?>
             <?php if(isset($row->field_field_image_image[0])) : ?>
                 <?php print theme('image_style', array('style_name' => $style, 'path' => $row->field_field_image_image[0]['raw']['uri'])); ?>
             <?php else: ?>
-                <a href="<?php print base_path() . drupal_get_path_alias("node/".$row->node_field_data_field_page_related_product_nid) ?>"><?php print theme('image_style', array('style_name' => $style, 'path' => $row->field_uc_product_image[0]['raw']['uri'])); ?>
+                <a href="<?php print base_path() . drupal_get_path_alias("node/".$row->node_field_data_field_page_related_product_nid) ?>">
+                    <?php print theme('image_style', array('style_name' => $style, 'path' => $row->field_uc_product_image[0]['raw']['uri'])); ?>
             <?php endif; ?>
     <?php else: ?>
         <?php
@@ -42,7 +46,7 @@
         ?>
         <?php print theme_image($variables) ?>
     <?php endif; ?>
-    <div class="content-wrapper" style="">
+    <div class="content-wrapper">
         <?php foreach ($fields as $id => $field): ?>
           <?php if (!empty($field->separator)): ?>
             <?php print $field->separator; ?>
@@ -53,6 +57,6 @@
             <?php print $field->content; ?>
           <?php print $field->wrapper_suffix; ?>
         <?php endforeach; ?>
-      <div class="opaque" style=""></div>
+      <div class="opaque"></div>
     </div>
 </div>

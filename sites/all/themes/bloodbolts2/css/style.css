@@ -7496,6 +7496,9 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
  */
 * {
   box-sizing: border-box;
+  font-family: "Archer SSm A", "Archer SSm B";
+  font-style: italic;
+  font-weight: 500;
 }
 a:hover {
   text-decoration: none;
@@ -7515,6 +7518,13 @@ header.navbar-inverse.navbar {
   margin-bottom: 0px;
   padding: 0 139px;
 }
+header.navbar-inverse.navbar ul.navbar-nav {
+  width: 93.9%;
+}
+header.navbar-inverse.navbar ul.navbar-nav li.item-right {
+  text-align: right;
+  float: right;
+}
 .main-container {
   max-width: 1080px;
   padding: 0;
@@ -7525,6 +7535,7 @@ header.navbar-inverse.navbar {
 =======================================*/
 .hero-container {
   width: 100%;
+  max-width: 1200px;
 }
 /*=====  End of Homepage Styles  ======*/
 /*====================================
@@ -7577,13 +7588,24 @@ header.navbar-inverse.navbar {
   transition: .2s;
 }
 .view-journal .views-row .content-wrapper .views-field-title {
-  padding: 30px 0 25px 0;
+  padding: 30px 0 15px 0;
+  margin: 0 0 15px 0;
+  position: relative;
 }
 .view-journal .views-row .content-wrapper .views-field-title a {
   color: #000;
   font-size: 15px;
   font-weight: bold;
   text-transform: uppercase;
+}
+.view-journal .views-row .content-wrapper .views-field-title:after {
+  content: '';
+  width: 40px;
+  height: 2px;
+  background: #252024;
+  position: absolute;
+  bottom: 0px;
+  left: 40%;
 }
 .view-journal .views-row .content-wrapper .views-field-field-page-link-cta {
   margin: 30px auto 0;
@@ -7763,6 +7785,14 @@ body.node-type-page .group-top-portion {
   -webkit-column-count: 2;
   -moz-column-count: 2;
   margin-bottom: 30px;
+}
+body.node-type-page .group-top-portion .field-name-body p:first-child:first-letter {
+  float: left;
+  font-size: 42px;
+  line-height: 33px;
+  padding-top: 6px;
+  padding-right: 4px;
+  padding-left: 3px;
 }
 body.node-type-page .field-name-field-page-category .field-item {
   display: inline-block;

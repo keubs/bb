@@ -1,0 +1,9 @@
+<?php
+function fonts_page_alter(&$page) {
+    $attributes = array( // Set up an array of attributes inside the tag
+      'href' => '//cloud.typography.com/6025554/793926/css/fonts.css',
+      'rel' => 'stylesheet',
+      'type' => 'text/css',
+    );
+    drupal_add_html_head_link($attributes);
+}

@@ -7,7 +7,12 @@
 /**
  * Place your custom styles here.
  */
- * { box-sizing: border-box; }
+ * {
+    box-sizing: border-box;
+    font-family: "Archer SSm A", "Archer SSm B";
+    font-style: italic;
+    font-weight: 500;
+}
 
 
 a:hover {
@@ -30,6 +35,15 @@ header.navbar-inverse.navbar {
     background: #323232;
     margin-bottom: 0px;
     padding: 0 139px;
+
+    ul.navbar-nav {
+        width: 93.9%;
+
+        li.item-right {
+            text-align:right;
+            float: right;
+        }
+    }
 }
 
 
@@ -46,6 +60,7 @@ header.navbar-inverse.navbar {
 
 .hero-container {
     width: 100%;
+    max-width: 1200px;
 }
 
 /*=====  End of Homepage Styles  ======*/
@@ -109,12 +124,24 @@ header.navbar-inverse.navbar {
             }
 
             .views-field-title {
-                padding: 30px 0 25px 0;
+                padding: 30px 0 15px 0;
+                margin: 0 0 15px 0;
+                position: relative;
+
                     a {
                     color: #000;
                     font-size: 15px;
                     font-weight: bold;
                     text-transform: uppercase;
+                }
+                &:after {
+                    content: '';
+                    width: 40px;
+                    height: 2px;
+                    background: #252024;
+                    position: absolute;
+                    bottom: 0px;
+                    left: 40%;
                 }
             }
 
@@ -346,6 +373,15 @@ body.node-type-page {
         -webkit-column-count: 2;
         -moz-column-count: 2;
         margin-bottom: 30px;
+
+        .field-name-body p:first-child:first-letter {
+            float: left;
+            font-size: 42px;
+            line-height: 33px;
+            padding-top: 6px;
+            padding-right: 4px;
+            padding-left: 3px;
+        }
     }
 
     .field-name-field-page-category {
