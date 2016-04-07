@@ -7568,7 +7568,7 @@ header.navbar-inverse.navbar ul.navbar-nav li.item-right {
 }
 .view-journal .views-row.wide .content-wrapper {
   height: 100%;
-  width: 40%;
+  width: 45%;
   right: -1000px;
   bottom: 0;
 }
@@ -7589,6 +7589,7 @@ header.navbar-inverse.navbar ul.navbar-nav li.item-right {
   z-index: 1;
   height: 300px;
   text-align: center;
+  width: 100%;
 }
 .view-journal .views-row .content-wrapper.active {
   bottom: 0;
@@ -7604,6 +7605,7 @@ header.navbar-inverse.navbar ul.navbar-nav li.item-right {
   font-size: 15px;
   font-weight: bold;
   text-transform: uppercase;
+  font-family: "futura-pt";
 }
 .view-journal .views-row .content-wrapper .views-field-title:after {
   content: '';
@@ -7791,16 +7793,28 @@ header.navbar-inverse.navbar ul.navbar-nav li.item-right {
 ===========================================*/
 body.node-type-page h1.page-header {
   font-size: 18px;
-  padding: 35px 0 13px 0;
+  padding: 35px 0 33px 0;
   border: 0;
   margin: 0 0 5px 0;
   font-family: "futura-pt";
   font-style: normal;
   font-weight: bold;
+  position: relative;
+}
+body.node-type-page h1.page-header:after {
+  content: '';
+  width: 40px;
+  height: 2px;
+  background: #252024;
+  position: absolute;
+  bottom: 15px;
+  left: 0;
 }
 body.node-type-page .group-top-portion {
   -webkit-column-count: 2;
   -moz-column-count: 2;
+  -webkit-column-gap: 90px;
+  -moz-column-gap: 90px;
   margin-bottom: 30px;
 }
 body.node-type-page .group-top-portion .field-name-body p:first-child:first-letter {
@@ -7854,6 +7868,43 @@ body.node-type-page .field-name-field-page-category .field-item a:hover {
 }
 .view-details-products-and-pictures .views-row.Product .views-field-title {
   display: block;
+}
+.view-details-products-and-pictures .views-row.Product .views-field-title a {
+  color: #000;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "futura-pt";
+}
+.view-details-products-and-pictures .views-row .content-wrapper {
+  position: absolute;
+  bottom: -1000px;
+  color: #1e1e1e;
+  padding: 25px 20px;
+  z-index: 1;
+  height: 50%;
+  width: 100%;
+  font-style: normal;
+}
+.view-details-products-and-pictures .views-row .content-wrapper.active {
+  bottom: 0;
+  transition: .2s;
+}
+.view-details-products-and-pictures .views-row .views-field-body {
+  width: 50%;
+}
+.view-details-products-and-pictures .views-row .views-field-sell-price {
+  padding: 1em 0;
+}
+.view-details-products-and-pictures .views-row .opaque {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  opacity: .73;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
 }
 /*=====  End of Details page view  ======*/
 /*==============================
