@@ -1,12 +1,15 @@
 <?php
 function fonts_page_alter(&$page) {
-    $attributes = array( // Set up an array of attributes inside the tag
+    // Adding typography.com fonts
+    $attributes = array(
       'href' => '//cloud.typography.com/6025554/793926/css/fonts.css',
       'rel' => 'stylesheet',
       'type' => 'text/css',
     );
 
     drupal_add_html_head_link($attributes);
+
+    // Adding typekit fonts
     drupal_add_js('https://use.typekit.net/tnm1huy.js', 'external');
     drupal_add_js('try{Typekit.load({ async: true });}catch(e){}',
         array('type' => 'inline'));
