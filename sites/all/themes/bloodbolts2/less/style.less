@@ -4,19 +4,34 @@
 // Base-theme overrides.
 @import 'overrides';
 
+
+@futura: "futura-pt";
+@archer: "Archer SSm A", "Archer SSm B";
+
+
+@orange: #be7900;
 /**
  * Place your custom styles here.
  */
  * {
     box-sizing: border-box;
-    font-family: "Archer SSm A", "Archer SSm B";
+}
+
+body {
+    font-family: @archer;
     font-style: italic;
     font-weight: 500;
 }
 
 
-a:hover {
-    text-decoration: none;
+a {
+    font-style: normal;
+    font-weight: bold;
+
+    &:hover {
+        text-decoration: none;
+        color: @orange;
+    }
 }
 
 img {
@@ -216,12 +231,17 @@ header.navbar-inverse.navbar {
 
         span.field-content {
             display: block;
-            width: 320px;
+            max-width: 405px;
             margin: 0 auto;
 
             a {
                 color: #FFF;
                 font-size: 60px;
+                font-family: @futura;
+                font-style: normal;
+                font-weight: bold;
+                text-transform: uppercase;
+                letter-spacing: 3px;
             }
         }
     }
@@ -338,6 +358,9 @@ header.navbar-inverse.navbar {
         padding-top: 120px;
         display: block;
         padding-bottom: 1em;
+        font-family: @futura;
+        font-style: normal;
+        font-weight: bold;
 
     }
     p {
@@ -345,7 +368,7 @@ header.navbar-inverse.navbar {
     }
 
     h2, p {
-        width: 250px;
+        width: 280px;
         margin: 0 auto;
     }
 
@@ -367,6 +390,9 @@ body.node-type-page {
         padding: 35px 0 13px 0;
         border: 0;
         margin: 0 0 5px 0;
+        font-family: @futura;
+        font-style: normal;
+        font-weight: bold;
     }
 
     .group-top-portion {
@@ -388,6 +414,14 @@ body.node-type-page {
         .field-item {
             display: inline-block;
             padding: 0 15px 20px 0;
+
+            a {
+                color: #d0d0d0;
+
+                &:hover {
+                    color: @orange;
+                }
+            }
         }
     }
 }

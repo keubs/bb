@@ -7496,12 +7496,19 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
  */
 * {
   box-sizing: border-box;
+}
+body {
   font-family: "Archer SSm A", "Archer SSm B";
   font-style: italic;
   font-weight: 500;
 }
+a {
+  font-style: normal;
+  font-weight: bold;
+}
 a:hover {
   text-decoration: none;
+  color: #be7900;
 }
 img {
   max-width: 100%;
@@ -7660,12 +7667,17 @@ header.navbar-inverse.navbar ul.navbar-nav li.item-right {
 }
 .view-homepage-banner .views-field-title span.field-content {
   display: block;
-  width: 320px;
+  max-width: 405px;
   margin: 0 auto;
 }
 .view-homepage-banner .views-field-title span.field-content a {
   color: #FFF;
   font-size: 60px;
+  font-family: "futura-pt";
+  font-style: normal;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
 .view-homepage-banner img {
   margin: 0 auto;
@@ -7753,18 +7765,20 @@ header.navbar-inverse.navbar ul.navbar-nav li.item-right {
 }
 .homepage-block h2 {
   font-size: 15px;
-  font-weight: bold;
   text-transform: uppercase;
   padding-top: 120px;
   display: block;
   padding-bottom: 1em;
+  font-family: "futura-pt";
+  font-style: normal;
+  font-weight: bold;
 }
 .homepage-block p {
   display: block;
 }
 .homepage-block h2,
 .homepage-block p {
-  width: 250px;
+  width: 280px;
   margin: 0 auto;
 }
 .homepage-block a {
@@ -7780,6 +7794,9 @@ body.node-type-page h1.page-header {
   padding: 35px 0 13px 0;
   border: 0;
   margin: 0 0 5px 0;
+  font-family: "futura-pt";
+  font-style: normal;
+  font-weight: bold;
 }
 body.node-type-page .group-top-portion {
   -webkit-column-count: 2;
@@ -7797,6 +7814,12 @@ body.node-type-page .group-top-portion .field-name-body p:first-child:first-lett
 body.node-type-page .field-name-field-page-category .field-item {
   display: inline-block;
   padding: 0 15px 20px 0;
+}
+body.node-type-page .field-name-field-page-category .field-item a {
+  color: #d0d0d0;
+}
+body.node-type-page .field-name-field-page-category .field-item a:hover {
+  color: #be7900;
 }
 /*=====  End of Details page styles  ======*/
 /*=========================================

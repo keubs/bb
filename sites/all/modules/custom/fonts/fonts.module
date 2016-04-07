@@ -5,5 +5,9 @@ function fonts_page_alter(&$page) {
       'rel' => 'stylesheet',
       'type' => 'text/css',
     );
+
     drupal_add_html_head_link($attributes);
+    drupal_add_js('https://use.typekit.net/tnm1huy.js', 'external');
+    drupal_add_js('try{Typekit.load({ async: true });}catch(e){}',
+        array('type' => 'inline'));
 }
