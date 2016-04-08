@@ -58,12 +58,7 @@ header.navbar-inverse.navbar {
     padding: 0 139px;
 
     ul.navbar-nav {
-        width: 93.9%;
-
-        li.item-right {
-            text-align:right;
-            float: right;
-        }
+        float: right;
     }
 }
 
@@ -551,8 +546,73 @@ body.node-type-page {
 
 /*=====  End of Details page view  ======*/
 
+
+/*====================================
+=            Product Page            =
+====================================*/
+
+body.node-type-product {
+    .group-product-left {
+        width: 30%;
+        margin-right: 3%;
+        float: left;
+    }
+
+    .field-name-uc-product-image {
+        width: 63.6%;
+            float: left;
+            margin-left: 3%;
+    }
+
+
+    .display-price {
+        float: none;
+        clear: both;
+        text-align: left;
+        padding: 1em 0;
+    }
+
+
+    #field-slideshow-1-wrapper {
+        position: relative;
+
+
+        #field-slideshow-1-controls {
+            position: absolute;
+
+            position: absolute;
+            top: 50%;
+            z-index: 9999;
+            width: 100%;
+        }
+
+        .next {
+            float: right;
+
+            &:after {
+                content: "→";
+                text-indent: -9999px;
+            }
+        }
+    }
+}
+
+/*=====  End of Product Page  ======*/
+
 /*==============================
-=            Footer            =
+=            Footer         body.node-type-product   = {
+    .group-product-left {
+    width: 30%;
+    margin-right: 3%;
+    float: left;
+    }
+
+    .field-name-uc-product-image {
+    width: 63.6%;
+        float: left;
+        margin-left: 3%;
+    }
+}
 ==============================*/
 
 footer.footer {

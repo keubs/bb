@@ -35,7 +35,7 @@
                 <?php print theme('image_style', array('style_name' => $style, 'path' => $row->field_field_image_image[0]['raw']['uri'])); ?>
             <?php else: ?>
                 <a href="<?php print base_path() . drupal_get_path_alias("node/".$row->node_field_data_field_page_related_product_nid) ?>">
-                    <?php print theme('image_style', array('style_name' => $style, 'path' => $row->field_uc_product_image[0]['raw']['uri'])); ?>
+                    <?php print theme('image_style', array('style_name' => $style, 'path' => $row->field_field_uc_product_promo_image[0]['raw']['uri'])); ?>
             <?php endif; ?>
     <?php else: ?>
         <?php
