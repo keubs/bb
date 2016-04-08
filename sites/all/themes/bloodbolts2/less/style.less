@@ -10,7 +10,7 @@
 
 
 @orange: #be7900;
-
+@black: #1e1e1e;
 #caret {
     &:after {
         content: " \203a";
@@ -129,7 +129,7 @@ header.navbar-inverse.navbar {
         .content-wrapper {
             position: absolute;
             bottom: -1000px;
-            color: #1e1e1e;
+            color: @black;
             padding: 5px 50px;
             z-index: 1;
             height: 300px;
@@ -210,11 +210,11 @@ header.navbar-inverse.navbar {
         a {
             text-align: center;
             display: block;
-            border: solid 2px #1e1e1e;
+            border: solid 2px @black;
             padding: 15px 25px;
             margin: 20px auto;
             width: 155px;
-            color: #1e1e1e;
+            color: @black;
             text-transform: uppercase;
             #caret;
         }
@@ -510,7 +510,7 @@ body.node-type-page {
         .content-wrapper {
             position: absolute;
             bottom: -1000px;
-            color: #1e1e1e;
+            color: @black;
             padding: 25px 20px;
             z-index: 1;
             height: 50%;
@@ -552,16 +552,25 @@ body.node-type-page {
 ====================================*/
 
 body.node-type-product {
+
+    h1.page-header {
+        font-family: @futura;
+        font-size: 50px;
+        width: 230px;
+        border: 0;
+        font-style: normal;
+        font-weight: bold;
+    }
     .group-product-left {
-        width: 30%;
+        width: 25%;
         margin-right: 3%;
         float: left;
     }
 
     .field-name-uc-product-image {
-        width: 63.6%;
-            float: left;
-            margin-left: 3%;
+        width: 68.6%;
+        float: left;
+        margin-left: 3%;
     }
 
 
@@ -581,9 +590,17 @@ body.node-type-product {
             position: absolute;
 
             position: absolute;
-            top: 50%;
+            top: 45%;
             z-index: 9999;
             width: 100%;
+        }
+
+        .prev,
+        .next {
+            font-size: 50px;
+            color: #000;
+            text-decoration: none;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         }
 
         .prev {
@@ -596,29 +613,35 @@ body.node-type-product {
 
             &:after {
                 content: "→";
-                text-indent: -9999px;
             }
+        }
+    }
+
+    .add-to-cart {
+        width: 100%;
+        margin: 1em auto 0;
+
+        input, 
+        select,
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px 10px;
+            margin: 0 0 20px 0;
+            border-radius: 0px;
+        }
+
+        button {
+            background: #ededed;
+            color: @black;
+            border: 0;
+            padding: 15px 0;
+            #caret;
         }
     }
 }
 
 /*=====  End of Product Page  ======*/
-
-/*==============================
-=            Footer         body.node-type-product   = {
-    .group-product-left {
-    width: 30%;
-    margin-right: 3%;
-    float: left;
-    }
-
-    .field-name-uc-product-image {
-    width: 63.6%;
-        float: left;
-        margin-left: 3%;
-    }
-}
-==============================*/
 
 footer.footer {
 
