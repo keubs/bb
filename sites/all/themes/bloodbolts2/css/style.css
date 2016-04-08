@@ -7948,6 +7948,9 @@ body.node-type-product #field-slideshow-1-wrapper #field-slideshow-1-controls {
   z-index: 9999;
   width: 100%;
 }
+body.node-type-product #field-slideshow-1-wrapper .prev:before {
+  content: '←';
+}
 body.node-type-product #field-slideshow-1-wrapper .next {
   float: right;
 }
