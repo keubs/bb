@@ -29,6 +29,5 @@ function fonts_wysiwyg_editor_settings_alter(&$settings, $context){
       // file. In this case, we're going to add our own configuration file that will
       // Hold our stylesSet customizations... 
       $settings['customConfig'] = base_path() . drupal_get_path('module', 'fonts') . '/ckeditor_custom_config.js';
-      $settings['allowedContent'] = TRUE; // TRUE actually disables ACF, as in "allow anything";
   }
 }
