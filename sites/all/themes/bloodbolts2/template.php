@@ -67,3 +67,49 @@ function bloodbolts2_preprocess_field(&$vars) {
       $vars['item_attributes_array'][$delta]['class'][] = $delta % 2 ? 'even' : 'odd';
     }
 }
+
+function bloodbolts2_views_pre_render(&$view) {
+    switch($view->name) {
+        case 'journal':
+            switch($view->current_display) {
+                case 'page':
+                    foreach($view->result as $delta => $result) {
+                        $style = 'node_list';
+                        $field_value = $result->field_field_page_list_layout[0]['rendered']['#markup'];
+                        $style .= strtolower($field_value) == 'default' ? '' : '_' . strtolower($field_value);
+                        $view->result[$delta]->field_field_page_images[0]['rendered']['#image_style'] = $style;
+                    }
+                    break;
+                default:
+                    break;
+            break;
+
+        }
+        case 'details_products_and_pictures':
+            foreach($view->result as $delta => $result) {
+                if(isset($result->node_field_data_field_page_related_product_type) && $result->node_field_data_field_page_related_product_type == 'imagery') {
+                    if(!empty($result->field_field_image_list_layout)) {
+                        
+                        $field_value = $result->field_field_image_list_layout[0]['rendered']['#markup'];
+                        $style = 'node_list';
+                        $style .= strtolower($field_value) == 'default' ? '' : '_' . strtolower($field_value);
+                        $view->result[$delta]->field_field_image_image[0]['rendered']['#image_style'] = $style;
+                    }
+                } else {
+
+                }
+                // dsm($result);
+                // dsm($result->node_field_data_field_page_related_product_title);
+                // dsm($field_value);
+                // if(isset($result->field_field_image_list_layout[0])) {
+                //     $style = 'node_list';
+                //     $field_value = $result->field_field_image_list_layout[0]['rendered']['#markup'];
+                //     $result->field_field_image_list_layout[0];
+                //     if(isset($view->result[$delta]->field_field_image_image[0])) {
+                //         $view->result[$delta]->field_field_image_image[0]['rendered']['#image_style'];
+                //     }
+                // }
+            }
+            break;
+    }
+}

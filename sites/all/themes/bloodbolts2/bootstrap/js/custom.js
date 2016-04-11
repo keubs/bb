@@ -5,6 +5,7 @@
     });
 
     $(window).load(function(){
+        $('body').fadeIn('slow');
         $('.view-journal .view-content').masonry({
             itemSelector: '.views-row',
             percentPosition: true,
@@ -31,6 +32,10 @@
         $('.view-details-products-and-pictures .views-row.Product').on('mouseenter', function(){
             $(this).find('.content-wrapper').addClass('active');
         });
+
+        window.onbeforeunload = function (e) {
+            $('body').fadeOut('slow');
+        }
     });
 
 }(jQuery);

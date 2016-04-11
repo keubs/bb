@@ -25,12 +25,17 @@
  */
 ?>
 <div style="position: relative">
-    <?php $style = 'node_list'; $field_value = $row->field_field_page_list_layout[0]['rendered']['#markup']?>
-    <?php $style .= strtolower($field_value) == 'default' ? '' : '_' . strtolower($field_value); ?>
-    <a href="<?php print drupal_get_path_alias("node/".$row->nid) ?>"><?php print theme('image_style', array('style_name' => $style, 'path' => $row->field_field_page_images[0]['raw']['uri'])); ?></a>
+    <?php if (!empty($fields['field_page_images']->separator)): ?>
+      <?php print $fields['field_page_images']->separator; ?>
+    <?php endif; ?>
 
+    <?php print $fields['field_page_images']->wrapper_prefix; ?>
+      <?php print $fields['field_page_images']->label_html; ?>
+      <?php print $fields['field_page_images']->content; ?>
+    <?php print $fields['field_page_images']->wrapper_suffix; ?>
     <div class="content-wrapper" style="">
         <?php foreach ($fields as $id => $field): ?>
+          <?php if($id == 'field_page_images') {continue;} ?>
           <?php if (!empty($field->separator)): ?>
             <?php print $field->separator; ?>
           <?php endif; ?>

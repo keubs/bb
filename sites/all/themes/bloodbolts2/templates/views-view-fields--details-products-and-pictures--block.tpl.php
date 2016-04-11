@@ -25,29 +25,26 @@
  */
 ?>
 <div style="position: relative">
-    <?php if (isset($row->field_field_image_list_layout[0])) : ?>
-            <?php
-                $style = 'node_list';
-                $field_value = $row->field_field_image_list_layout[0]['rendered']['#markup']
-            ?>
-            <?php $style .= strtolower($field_value) == 'default' ? '' : '_' . strtolower($field_value); ?>
-            <?php if(isset($row->field_field_image_image[0])) : ?>
-                <?php print theme('image_style', array('style_name' => $style, 'path' => $row->field_field_image_image[0]['raw']['uri'])); ?>
-            <?php else: ?>
-                <a href="<?php print base_path() . drupal_get_path_alias("node/".$row->node_field_data_field_page_related_product_nid) ?>">
-                    <?php print theme('image_style', array('style_name' => $style, 'path' => $row->field_field_uc_product_promo_image[0]['raw']['uri'])); ?>
-            <?php endif; ?>
-    <?php else: ?>
-        <?php
-            $variables = array(
-                'path' => $row->field_field_image_image[0]['raw']['uri'],
-                'attributes' => array(),
-            );
-        ?>
-        <?php print theme_image($variables) ?>
+    <?php if (!empty($fields['field_image_image']->separator)): ?>
+      <?php print $fields['field_image_image']->separator; ?>
     <?php endif; ?>
+
+    <?php print $fields['field_image_image']->wrapper_prefix; ?>
+      <?php print $fields['field_image_image']->label_html; ?>
+      <?php print $fields['field_image_image']->content; ?>
+    <?php print $fields['field_image_image']->wrapper_suffix; ?>
+
+    <?php if (!empty($fields['field_uc_product_promo_image']->separator)): ?>
+      <?php print $fields['field_uc_product_promo_image']->separator; ?>
+    <?php endif; ?>
+
+    <?php print $fields['field_uc_product_promo_image']->wrapper_prefix; ?>
+      <?php print $fields['field_uc_product_promo_image']->label_html; ?>
+      <?php print $fields['field_uc_product_promo_image']->content; ?>
+    <?php print $fields['field_uc_product_promo_image']->wrapper_suffix; ?>
     <div class="content-wrapper">
         <?php foreach ($fields as $id => $field): ?>
+            <?php if($id == 'field_uc_product_promo_image' || $id == 'field_image_image'){continue;} ?>
           <?php if (!empty($field->separator)): ?>
             <?php print $field->separator; ?>
           <?php endif; ?>
