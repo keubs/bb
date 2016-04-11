@@ -98,18 +98,19 @@ function bloodbolts2_views_pre_render(&$view) {
                 } else {
 
                 }
-                // dsm($result);
-                // dsm($result->node_field_data_field_page_related_product_title);
-                // dsm($field_value);
-                // if(isset($result->field_field_image_list_layout[0])) {
-                //     $style = 'node_list';
-                //     $field_value = $result->field_field_image_list_layout[0]['rendered']['#markup'];
-                //     $result->field_field_image_list_layout[0];
-                //     if(isset($view->result[$delta]->field_field_image_image[0])) {
-                //         $view->result[$delta]->field_field_image_image[0]['rendered']['#image_style'];
-                //     }
-                // }
             }
+            break;
+    }
+}
+
+function bloodbolts2_preprocess_node(&$vars) {
+    switch($vars['type']) {
+        case 'product':
+            drupal_add_js(path_to_theme() . '/bootstrap/js/jquery.sldr.js');
+            drupal_add_js(path_to_theme() . '/bootstrap/js/sldr.js', array('scope' => 'footer'));
+            break;
+        default: 
+
             break;
     }
 }

@@ -6,5 +6,8 @@
 CKEDITOR.editorConfig = function( config ) {
 	// Define changes to default configuration here. For example:
 	// config.language = 'fr';
-	// config.uiColor = '#AADC6E';
+	config.uiColor = '#AADC6E';
+	console.log('hey');
+	//the next line add the new font to the combobox in CKEditor
+	config.font_names = 'Archer/asdf' + config.font_names;
 };

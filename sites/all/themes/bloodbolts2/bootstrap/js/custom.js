@@ -36,6 +36,7 @@
         window.onbeforeunload = function (e) {
             $('body').fadeOut('slow');
         }
+
     });
 
 }(jQuery);
