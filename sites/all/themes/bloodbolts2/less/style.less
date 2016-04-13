@@ -568,9 +568,9 @@ body.node-type-product {
     }
 
     .field-name-uc-product-image {
-        width: 45%;
+        width: 66%;
         float: left;
-
+        position: relative;
         .field-items {
 
             .field-item {
@@ -579,6 +579,21 @@ body.node-type-product {
                 max-width: 100%;
                 height: auto !important;
                 width: auto !important;
+            }
+        }
+
+        .cyclers {
+            position: absolute;
+            top: 40%;
+            z-index: 999;
+            width: 100%;
+
+            .cycle-next {
+                float: right;
+            }
+
+            .cycle-prev {
+                float: left;
             }
         }
     }
@@ -597,7 +612,7 @@ body.node-type-product {
         width: 100%;
         margin: 1em auto 0;
 
-        input, 
+        input,
         select,
         button {
             display: block;
@@ -617,7 +632,72 @@ body.node-type-product {
     }
 
 
+    #block-views-factory-profiles-block {
+        margin-top: 2em;
 
+        h2.block-title {
+            text-align: center;
+            font-family: @futura;
+            font-style: normal;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .view-factory-profiles {
+
+            .view-header {
+                text-align: center;
+                margin-bottom: 2em;
+            }
+
+            .views-field-title {
+                font-family: @futura;
+                font-style: normal;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+
+            .views-field-field-factory-profile-tags {
+                margin-bottom: 1em;
+                font-style: normal;
+                text-transform: uppercase;
+            }
+
+            .views-field-field-profile-location {
+                position: relative;
+                padding-bottom: 1em;
+                margin-bottom: 1em;
+                &:after {
+                    content: '';
+                    width: 40px;
+                    height: 2px;
+                    background: #252024;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                }
+            }
+        }
+    }
+
+    #block-views-product-related-products-block {
+        h2.block-title {
+            text-align: center;
+            font-family: @futura;
+            font-style: normal;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .view-content {
+            border-top: solid 1px #ebebeb;
+            margin-top: 1em;
+            padding-top: 1em;
+        }
+
+    }
 }
 
 /*=====  End of Product Page  ======*/

@@ -38,8 +38,7 @@
         }
 
 
-        $('<div class="cycle-prev"><a href="#">prev</a></div>').insertAfter('.field-name-uc-product-image');
-        $('<div class="cycle-next"><a href="#">next</a></div>').insertAfter('.field-name-uc-product-image');
+        $('.field-name-uc-product-image').append('<div class="cyclers"><div class="cycle-prev"><a href="#">prev</a></div><div class="cycle-next"><a href="#">next</a></div></div>');
         $('.field-name-uc-product-image .field-items')
         .cycle({
             slides: '> div', 
