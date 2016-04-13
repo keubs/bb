@@ -562,15 +562,25 @@ body.node-type-product {
         font-weight: bold;
     }
     .group-product-left {
-        // width: 25%;
-        // margin-right: 3%;
-        // float: left;
+        width: 30%;
+        margin-right: 3%;
+        float: left;
     }
 
     .field-name-uc-product-image {
-        width: 100%;
-        // float: left;
-        // margin-left: 3%;
+        width: 45%;
+        float: left;
+
+        .field-items {
+
+            .field-item {
+                max-width: 500px;
+                float: left;
+                max-width: 100%;
+                height: auto !important;
+                width: auto !important;
+            }
+        }
     }
 
 
@@ -582,40 +592,6 @@ body.node-type-product {
     }
 
 
-    #field-slideshow-1-wrapper {
-        position: relative;
-
-
-        #field-slideshow-1-controls {
-            position: absolute;
-
-            position: absolute;
-            top: 45%;
-            z-index: 9999;
-            width: 100%;
-        }
-
-        .prev,
-        .next {
-            font-size: 50px;
-            color: #000;
-            text-decoration: none;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        }
-
-        .prev {
-            &:before {
-                content: '←';
-            }
-        }
-        .next {
-            float: right;
-
-            &:after {
-                content: "→";
-            }
-        }
-    }
 
     .add-to-cart {
         width: 100%;
@@ -641,27 +617,7 @@ body.node-type-product {
     }
 
 
-    .field-name-uc-product-image {
-        max-width: 825px;
-        margin: 0 auto;
-        overflow: visible;
-        position: relative;
-        clear: both;
-        display: block;
-    }
 
-    .field-name-uc-product-image > .field-items.animate {
-        -webkit-transition: margin 0.75s cubic-bezier(0.860, 0.000, 0.070, 1.000); 
-           -moz-transition: margin 0.75s cubic-bezier(0.860, 0.000, 0.070, 1.000); 
-             -o-transition: margin 0.75s cubic-bezier(0.860, 0.000, 0.070, 1.000); 
-                transition: margin 0.75s cubic-bezier(0.860, 0.000, 0.070, 1.000); /* ease-in-out */    
-    }
-
-    .field-name-uc-product-image > .field-items > .field-item {
-        float: left;
-        display: block;
-        width: 825px;
-    }
 }
 
 /*=====  End of Product Page  ======*/

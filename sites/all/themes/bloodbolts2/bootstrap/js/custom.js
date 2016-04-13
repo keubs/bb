@@ -37,6 +37,19 @@
             $('body').fadeOut('slow');
         }
 
+
+        $('<div class="cycle-prev"><a href="#">prev</a></div>').insertAfter('.field-name-uc-product-image');
+        $('<div class="cycle-next"><a href="#">next</a></div>').insertAfter('.field-name-uc-product-image');
+        $('.field-name-uc-product-image .field-items')
+        .cycle({
+            slides: '> div', 
+            hideNonActive: false,
+            timeout: 0,
+            next: '.cycle-next',
+            prev: '.cycle-prev',
+            fx: 'scrollHorz',
+            visible: 2,
+        });
     });
 
 }(jQuery);
