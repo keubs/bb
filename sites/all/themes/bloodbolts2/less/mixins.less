@@ -1,0 +1,26 @@
+/*==============================
+=            Mixins            =
+==============================*/
+
+.line(@left, @bottom) {
+    content: '';
+    width: 40px;
+    height: 2px;
+    background: #252024;
+    position: absolute;
+    bottom: @bottom;
+    left: @left;
+}
+
+
+.outline-button {
+	text-align: center;
+	display: inline-block;
+	border: solid 2px @black;
+	padding: 15px 25px;
+	margin: 20px auto;
+	color: @black;
+	text-transform: uppercase;
+	#caret;
+}
+/*=====  End of Mixins  ======*/

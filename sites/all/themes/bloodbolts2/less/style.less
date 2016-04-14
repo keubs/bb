@@ -4,6 +4,8 @@
 // Base-theme overrides.
 @import 'overrides';
 
+// Mixins
+@import 'mixins';
 
 @futura: "futura-pt";
 @archer: "Archer SSm A", "Archer SSm B";
@@ -154,13 +156,7 @@ header.navbar-inverse.navbar {
                     font-family: @futura;
                 }
                 &:after {
-                    content: '';
-                    width: 40px;
-                    height: 2px;
-                    background: #252024;
-                    position: absolute;
-                    bottom: 0px;
-                    left: 40%;
+                    .line(40%, 0px);
                 }
             }
 
@@ -203,20 +199,11 @@ header.navbar-inverse.navbar {
         width: 2%;
     }
 
-
-
     .view-footer {
+        text-align: center;
 
         a {
-            text-align: center;
-            display: block;
-            border: solid 2px @black;
-            padding: 15px 25px;
-            margin: 20px auto;
-            width: 155px;
-            color: @black;
-            text-transform: uppercase;
-            #caret;
+            .outline-button;
         }
     }
 }
@@ -409,13 +396,7 @@ body.node-type-page {
 
 
         &:after {
-            content: '';
-            width: 40px;
-            height: 2px;
-            background: #252024;
-            position: absolute;
-            bottom: 15px;
-            left: 0;
+            .line(0, 15px);
         }
     }
 
@@ -571,16 +552,7 @@ body.node-type-product {
         width: 66%;
         float: left;
         position: relative;
-        .field-items {
-
-            .field-item {
-                max-width: 500px;
-                float: left;
-                max-width: 100%;
-                height: auto !important;
-                width: auto !important;
-            }
-        }
+        overflow: hidden;
 
         .cyclers {
             position: absolute;
@@ -633,7 +605,7 @@ body.node-type-product {
 
 
     #block-views-factory-profiles-block {
-        margin-top: 2em;
+        margin-top: 3em;
 
         h2.block-title {
             text-align: center;
@@ -648,7 +620,7 @@ body.node-type-product {
 
             .view-header {
                 text-align: center;
-                margin-bottom: 2em;
+                margin-bottom: 3em;
             }
 
             .views-field-title {
@@ -669,19 +641,23 @@ body.node-type-product {
                 padding-bottom: 1em;
                 margin-bottom: 1em;
                 &:after {
-                    content: '';
-                    width: 40px;
-                    height: 2px;
-                    background: #252024;
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
+                    .line(0, 0);
+                }
+            }
+
+            .view-footer {
+                text-align: center;
+                margin-bottom: 2em;
+                
+                a { 
+                    .outline-button;
                 }
             }
         }
     }
 
     #block-views-product-related-products-block {
+        margin-top: 2em;
         h2.block-title {
             text-align: center;
             font-family: @futura;
@@ -697,6 +673,25 @@ body.node-type-product {
             padding-top: 1em;
         }
 
+    }
+
+    .group-designer-block {
+        position: relative;
+        margin-top: 2em;
+
+        .field-name-field-designer-overlay-text {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            top: 45%;
+            font-size: 60px;
+            font-family: @futura;
+            font-style: normal;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #FFF;
+        }
     }
 }
 
