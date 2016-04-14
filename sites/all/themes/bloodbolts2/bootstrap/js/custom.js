@@ -5,7 +5,7 @@
     });
 
     $(window).load(function(){
-        $('body').fadeIn('slow');
+        $('#content').fadeIn('slow');
         $('.view-journal .view-content').masonry({
             itemSelector: '.views-row',
             percentPosition: true,
@@ -34,11 +34,11 @@
         });
 
         window.onbeforeunload = function (e) {
-            $('body').fadeOut('slow');
+            $('#container').fadeOut('slow');
         }
 
 
-        $('.field-name-uc-product-image').append('<div class="cyclers"><div class="cycle-prev"><a href="#">prev</a></div><div class="cycle-next"><a href="#">next</a></div></div>');
+        $('.field-name-uc-product-image').append('<div class="cyclers"><div class="cycle-prev"><a href="#"></a></div><div class="cycle-next"><a href="#"></a></div></div>');
         $('.field-name-uc-product-image .field-items')
         .cycle({
             slides: '> div', 

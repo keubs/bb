@@ -28,7 +28,6 @@ body {
     font-family: @archer;
     font-style: italic;
     font-weight: 500;
-    display: none;
 }
 
 
@@ -64,6 +63,9 @@ header.navbar-inverse.navbar {
     }
 }
 
+#content {
+    display: none;
+}
 
 .main-container {
     max-width: 1080px;
@@ -556,16 +558,26 @@ body.node-type-product {
 
         .cyclers {
             position: absolute;
-            top: 40%;
+            top: 50%;
             z-index: 999;
             width: 100%;
+            font-size: 50px;
+            font-style: normal;
 
             .cycle-next {
+                cursor: pointer;
                 float: right;
+                &:after {
+                    content: '\02192';
+                }
             }
 
             .cycle-prev {
+                cursor: pointer;
                 float: left;
+                &:before {
+                    content: '\02190';
+                }
             }
         }
     }
@@ -671,6 +683,11 @@ body.node-type-product {
             border-top: solid 1px #ebebeb;
             margin-top: 1em;
             padding-top: 1em;
+
+            .views-row {
+                float: none;
+                margin: 0 auto;
+            }
         }
 
     }
