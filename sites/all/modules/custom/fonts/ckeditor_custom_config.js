@@ -11,6 +11,4 @@ CKEDITOR.editorConfig = function( config ) {
 	//the next line add the new font to the combobox in CKEditor
 	config.font_names = 'Archer/Archer SSm A", "Archer SSm B"' + config.font_names;
 	config.font_names = 'Futura/futura-pt' + config.font_names;
-    config.allowedContent = true;
-    console.log(config);
 };

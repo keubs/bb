@@ -10,6 +10,17 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
 if(typeof(CKEDITOR) !== 'undefined') {
     CKEDITOR.addStylesSet( 'drupal',
     [
+            {
+                name : 'Archer Title', element : 'span', styles : {
+                        'color': '#FFF',
+                        'font-size': '60px',
+                        'font-family': 'futura-pt',
+                        'font-style': 'normal',
+                        'font-weight': 'bold',
+                        'text-transform': 'uppercase',
+                        'letter-spacing': '3px',
+                    }
+            },
             /* Block Styles */
 
             // These styles are already available in the "Format" drop-down list, so they are

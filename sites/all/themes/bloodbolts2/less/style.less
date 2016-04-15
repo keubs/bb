@@ -44,6 +44,11 @@ a {
 img {
     max-width: 100%;
 }
+
+h1.page-header {
+    margin: 1em 0 1em 0;
+}
+
 /*----------  Subsection comment block  ----------*/
 #toolbar div.toolbar-menu {
     margin-top: 20px;
@@ -220,27 +225,13 @@ header.navbar-inverse.navbar {
         position: relative;
     }
 
-    .views-field-title {
+    .views-field-body {
         position: absolute;
         width: 100%;
         text-align: center;
         padding-top: 100px;
-
-        span.field-content {
-            display: block;
-            max-width: 405px;
-            margin: 0 auto;
-
-            a {
-                color: #FFF;
-                font-size: 60px;
-                font-family: @futura;
-                font-style: normal;
-                font-weight: bold;
-                text-transform: uppercase;
-                letter-spacing: 3px;
-            }
-        }
+        top: 0;
+        left: 0;
     }
 
     img {
@@ -556,6 +547,13 @@ body.node-type-product {
         position: relative;
         overflow: hidden;
 
+        .field-items {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .field-item {
+            width: 100%;
+        }
         .cyclers {
             position: absolute;
             top: 50%;

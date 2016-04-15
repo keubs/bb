@@ -7532,6 +7532,9 @@ a:hover {
 img {
   max-width: 100%;
 }
+h1.page-header {
+  margin: 1em 0 1em 0;
+}
 /*----------  Subsection comment block  ----------*/
 #toolbar div.toolbar-menu {
   margin-top: 20px;
@@ -7689,25 +7692,13 @@ header.navbar-inverse.navbar ul.navbar-nav {
 .view-homepage-banner .views-row {
   position: relative;
 }
-.view-homepage-banner .views-field-title {
+.view-homepage-banner .views-field-body {
   position: absolute;
   width: 100%;
   text-align: center;
   padding-top: 100px;
-}
-.view-homepage-banner .views-field-title span.field-content {
-  display: block;
-  max-width: 405px;
-  margin: 0 auto;
-}
-.view-homepage-banner .views-field-title span.field-content a {
-  color: #FFF;
-  font-size: 60px;
-  font-family: "futura-pt";
-  font-style: normal;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 3px;
+  top: 0;
+  left: 0;
 }
 .view-homepage-banner img {
   margin: 0 auto;
@@ -7962,6 +7953,13 @@ body.node-type-product .field-name-uc-product-image {
   float: left;
   position: relative;
   overflow: hidden;
+}
+body.node-type-product .field-name-uc-product-image .field-items {
+  width: 80%;
+  margin: 0 auto;
+}
+body.node-type-product .field-name-uc-product-image .field-item {
+  width: 100%;
 }
 body.node-type-product .field-name-uc-product-image .cyclers {
   position: absolute;
