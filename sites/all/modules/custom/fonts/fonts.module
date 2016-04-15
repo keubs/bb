@@ -28,6 +28,7 @@ function fonts_wysiwyg_editor_settings_alter(&$settings, $context){
       // Another way to override configuration is to use your own configuration javascript
       // file. In this case, we're going to add our own configuration file that will
       // Hold our stylesSet customizations... 
+      $settings['allowedContent'] = TRUE;
       $settings['customConfig'] = base_path() . drupal_get_path('module', 'fonts') . '/ckeditor_custom_config.js';
   }
 }
