@@ -84,7 +84,7 @@
         });
 
         $( document ).ajaxComplete(function( event, xhr, settings ) {
-            if(settings.url == "/drupal/views/ajax") {
+            if(settings.url == "/views/ajax") {
                 $('.view-store .views-row .views-field-uc-product-image').each(function(){
                     $(this).find('div.field-content').cycle({
                         slides: 'a',
