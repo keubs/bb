@@ -24,6 +24,13 @@
     box-sizing: border-box;
 }
 
+
+@media (min-width: 768px) {
+    .content {
+        width: 100%;
+    }
+}
+
 body {
     font-family: @archer;
     font-style: italic;
@@ -188,7 +195,17 @@ header.navbar-inverse.navbar {
                 left: 0;
                 z-index:-1;
             }
+
+            @media (max-width: 768px) {
+                position: relative;
+                display: block;
+                bottom: 0;
+                padding: 10px;
+                height: auto;
+            }
         }
+
+
     }
 
 
@@ -211,6 +228,17 @@ header.navbar-inverse.navbar {
 
         a {
             .outline-button;
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding: 0 20px;
+
+        .views-row,
+        .views-row.tall,
+        .views-row.wide {
+            width: 100%;
+            overflow: visible;
         }
     }
 }
@@ -683,7 +711,6 @@ body.node-type-product {
             padding-top: 1em;
 
             .views-row {
-                float: none;
                 margin: 0 auto;
             }
         }
