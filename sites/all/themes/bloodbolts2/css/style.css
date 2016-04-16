@@ -8132,6 +8132,9 @@ body.node-type-product .group-designer-block .field-name-field-designer-overlay-
 /*==================================
 =            Store Page            =
 ==================================*/
+body.page-node-141 h1.page-header {
+  display: none;
+}
 .view-store {
   margin-top: 2em;
 }
@@ -8145,6 +8148,29 @@ body.node-type-product .group-designer-block .field-name-field-designer-overlay-
   font-family: "futura-pt";
   font-style: normal;
   font-weight: bold;
+}
+.view-store #edit-taxonomy-catalog-tid-wrapper {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.view-store #edit-taxonomy-catalog-tid-wrapper .bef-select-as-links {
+  text-align: center;
+}
+.view-store #edit-taxonomy-catalog-tid-wrapper .bef-select-as-links .form-item .form-item {
+  display: inline-block;
+  padding: 0 50px;
+  border-left: solid 1px #d6d6d6;
+}
+.view-store #edit-taxonomy-catalog-tid-wrapper .bef-select-as-links .form-item .form-item a {
+  text-transform: uppercase;
+}
+.view-store #edit-taxonomy-catalog-tid-wrapper .bef-select-as-links .form-item .form-item:first-child {
+  border-left: none;
+}
+.view-store .views-submit-button,
+.view-store .views-reset-button {
+  display: none;
 }
 /*=====  End of Store Page  ======*/
 footer.footer .block {

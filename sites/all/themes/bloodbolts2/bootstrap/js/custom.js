@@ -59,6 +59,55 @@
                 visible: 2,
             });
         }
+
+        // cycle through images
+
+        $('.view-store .views-row .views-field-uc-product-image').each(function(){
+            $(this).find('div.field-content').cycle({
+                slides: 'a',
+                fx: 'none',
+                speed: 1,
+                timeout: 500
+            }).cycle('pause');
+            // $(this).find('.field-content').cycle({
+            //     fx:     'none',
+            //     speed:   1,
+            //     timeout: 500
+            // }).cycle("pause");
+
+            // // Pause & play on hover
+            $(this).hover(function(){
+                $(this).find('div.field-content').addClass('active').cycle('resume');
+            }, function(){
+                $(this).find('div.field-content').removeClass('active').cycle('pause');
+            });
+        });
+
+        $( document ).ajaxComplete(function( event, xhr, settings ) {
+            if(settings.url == "/drupal/views/ajax") {
+                $('.view-store .views-row .views-field-uc-product-image').each(function(){
+                    $(this).find('div.field-content').cycle({
+                        slides: 'a',
+                        fx: 'none',
+                        speed: 1,
+                        timeout: 500
+                    }).cycle('pause');
+                    // $(this).find('.field-content').cycle({
+                    //     fx:     'none',
+                    //     speed:   1,
+                    //     timeout: 500
+                    // }).cycle("pause");
+
+                    // // Pause & play on hover
+                    $(this).hover(function(){
+                        $(this).find('div.field-content').addClass('active').cycle('resume');
+                    }, function(){
+                        $(this).find('div.field-content').removeClass('active').cycle('pause');
+                    });
+                });
+            }
+        });
+
     });
 
 }(jQuery);

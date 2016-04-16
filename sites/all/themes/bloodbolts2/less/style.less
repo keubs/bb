@@ -742,6 +742,11 @@ body.node-type-product {
 /*==================================
 =            Store Page            =
 ==================================*/
+body.page-node-141 {
+    h1.page-header {
+        display: none;
+    }
+}
 
 .view-store {
     margin-top: 2em;
@@ -757,7 +762,37 @@ body.node-type-product {
         font-style: normal;
         font-weight: bold;
     }
+
+    #edit-taxonomy-catalog-tid-wrapper {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+
+        .bef-select-as-links {
+            text-align: center;
+
+            .form-item .form-item {
+                display: inline-block;
+                padding: 0 50px;
+                border-left: solid 1px #d6d6d6;
+                a {
+                    text-transform: uppercase;
+                }
+            }
+
+            .form-item .form-item:first-child {
+                border-left: none;
+            }
+        }
+
+    }
+
+    .views-submit-button,
+    .views-reset-button {
+        display: none;
+    }
 }
+
 
 
 /*=====  End of Store Page  ======*/
