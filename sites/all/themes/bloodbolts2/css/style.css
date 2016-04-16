@@ -8129,6 +8129,24 @@ body.node-type-product .group-designer-block .field-name-field-designer-overlay-
   color: #FFF;
 }
 /*=====  End of Product Page  ======*/
+/*==================================
+=            Store Page            =
+==================================*/
+.view-store {
+  margin-top: 2em;
+}
+.view-store img {
+  margin: 0 auto;
+}
+.view-store .views-field-title {
+  text-transform: uppercase;
+  text-align: center;
+  color: #be7900;
+  font-family: "futura-pt";
+  font-style: normal;
+  font-weight: bold;
+}
+/*=====  End of Store Page  ======*/
 footer.footer .block {
   display: inline-block;
   padding-left: 15px;
