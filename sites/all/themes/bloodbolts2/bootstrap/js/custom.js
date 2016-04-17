@@ -108,14 +108,6 @@
             }
         });
 
-
-        $(function(){
-                $('#block-views-homepage-banner-block').css({'height':(($(document).height())-162)+'px'});
-
-                $(window).resize(function(){
-                $('#block-views-homepage-banner-block').css({'height':(($(document).height())-162)+'px'});
-                });
-            });
     });
 
 }(jQuery);
