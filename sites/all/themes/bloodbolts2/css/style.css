@@ -7510,6 +7510,9 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
 #caret:after {
   content: " \203a";
 }
+.bbcaret:after {
+  content: " \203a";
+}
 /**
  * Place your custom styles here.
  */
@@ -7630,7 +7633,7 @@ header.navbar-inverse.navbar ul.navbar-nav {
   font-size: 15px;
   font-weight: bold;
   text-transform: uppercase;
-  font-family: "futura-pt";
+  font-family: "futura-pt", "sans-serif";
 }
 .view-journal .views-row .content-wrapper .views-field-title:after {
   content: '';
@@ -7723,6 +7726,10 @@ header.navbar-inverse.navbar ul.navbar-nav {
   padding-top: 100px;
   top: 0;
   left: 0;
+  color: #FFF;
+}
+.view-homepage-banner .views-field-body a {
+  color: #FFF;
 }
 .view-homepage-banner img {
   margin: 0 auto;
@@ -7814,7 +7821,7 @@ header.navbar-inverse.navbar ul.navbar-nav {
   padding-top: 120px;
   display: block;
   padding-bottom: 1em;
-  font-family: "futura-pt";
+  font-family: "futura-pt", "sans-serif";
   font-style: normal;
   font-weight: bold;
 }
@@ -7845,7 +7852,7 @@ body.node-type-page h1.page-header {
   padding: 35px 0 33px 0;
   border: 0;
   margin: 0 0 5px 0;
-  font-family: "futura-pt";
+  font-family: "futura-pt", "sans-serif";
   font-style: normal;
   font-weight: bold;
   position: relative;
@@ -7923,7 +7930,7 @@ body.node-type-page .field-name-field-page-category .field-item a:hover {
   font-size: 15px;
   font-weight: bold;
   text-transform: uppercase;
-  font-family: "futura-pt";
+  font-family: "futura-pt", "sans-serif";
 }
 .view-details-products-and-pictures .views-row .content-wrapper {
   position: absolute;
@@ -7960,7 +7967,7 @@ body.node-type-page .field-name-field-page-category .field-item a:hover {
 =            Product Page            =
 ====================================*/
 body.node-type-product h1.page-header {
-  font-family: "futura-pt";
+  font-family: "futura-pt", "sans-serif";
   font-size: 50px;
   width: 230px;
   border: 0;
@@ -8040,7 +8047,7 @@ body.node-type-product #block-views-factory-profiles-block {
 }
 body.node-type-product #block-views-factory-profiles-block h2.block-title {
   text-align: center;
-  font-family: "futura-pt";
+  font-family: "futura-pt", "sans-serif";
   font-style: normal;
   text-transform: uppercase;
   font-weight: bold;
@@ -8051,7 +8058,7 @@ body.node-type-product #block-views-factory-profiles-block .view-factory-profile
   margin-bottom: 3em;
 }
 body.node-type-product #block-views-factory-profiles-block .view-factory-profiles .views-field-title {
-  font-family: "futura-pt";
+  font-family: "futura-pt", "sans-serif";
   font-style: normal;
   text-transform: uppercase;
   font-weight: bold;
@@ -8096,7 +8103,7 @@ body.node-type-product #block-views-product-related-products-block {
 }
 body.node-type-product #block-views-product-related-products-block h2.block-title {
   text-align: center;
-  font-family: "futura-pt";
+  font-family: "futura-pt", "sans-serif";
   font-style: normal;
   text-transform: uppercase;
   font-weight: bold;
@@ -8120,7 +8127,7 @@ body.node-type-product .group-designer-block .field-name-field-designer-overlay-
   text-align: center;
   top: 45%;
   font-size: 60px;
-  font-family: "futura-pt";
+  font-family: "futura-pt", "sans-serif";
   font-style: normal;
   font-weight: bold;
   text-transform: uppercase;
@@ -8144,7 +8151,7 @@ body.page-node-141 h1.page-header {
   text-transform: uppercase;
   text-align: center;
   color: #be7900;
-  font-family: "futura-pt";
+  font-family: "futura-pt", "sans-serif";
   font-style: normal;
   font-weight: bold;
 }
@@ -8184,6 +8191,13 @@ body.maintenance-page {
 body.maintenance-page #container {
   width: 400px;
   margin: 0 auto;
+}
+body.maintenance-page h1.title {
+  font-family: "futura-pt", "sans-serif";
+  font-size: 50px;
+  border: 0;
+  font-style: normal;
+  font-weight: bold;
 }
 /*=====  End of Maintenance Page  ======*/
 /*=====  End of Store Page  ======*/

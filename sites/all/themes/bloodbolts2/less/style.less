@@ -7,7 +7,7 @@
 // Mixins
 @import 'mixins';
 
-@futura: "futura-pt";
+@futura: "futura-pt", "sans-serif";
 @archer: "Archer SSm A", "Archer SSm B";
 
 @orange: #be7900;
@@ -16,6 +16,10 @@
     &:after {
         content: " \203a";
     }
+}
+
+.bbcaret {
+    #caret;
 }
 /**
  * Place your custom styles here.
@@ -260,6 +264,11 @@ header.navbar-inverse.navbar {
         padding-top: 100px;
         top: 0;
         left: 0;
+        color: #FFF;
+
+        a {
+            color: #FFF;
+        }
     }
 
     img {
@@ -810,6 +819,14 @@ body.maintenance-page {
     #container {
         width: 400px;
         margin: 0 auto;
+    }
+
+    h1.title {
+        font-family: @futura;
+        font-size: 50px;
+        border: 0;
+        font-style: normal;
+        font-weight: bold;
     }
 }
 
