@@ -72,10 +72,33 @@ h1.page-header {
 header.navbar-inverse.navbar {
     background: #323232;
     margin-bottom: 0px;
-    padding: 0 139px;
 
     ul.navbar-nav {
         float: right;
+        text-transform: uppercase;
+
+        & > li > a {
+            padding-top: 17px;
+        }
+
+        li.search-link a {
+            display: block;
+            position: relative;
+            text-indent: -288%;
+            white-space: nowrap;
+            overflow: hidden;
+
+            &:after {
+                content: "\1F50D";
+                position: absolute;
+                right: 10px;
+                bottom: 23%;
+            }
+        }
+    }
+
+    .container {
+        padding: 0 130px;
     }
 }
 
