@@ -43,6 +43,7 @@
       <?php print $fields['field_uc_product_promo_image']->content; ?>
     <?php print $fields['field_uc_product_promo_image']->wrapper_suffix; ?>
     <div class="content-wrapper">
+        <a class="close" href="#">Close</a>
         <?php foreach ($fields as $id => $field): ?>
             <?php if($id == 'field_uc_product_promo_image' || $id == 'field_image_image'){continue;} ?>
           <?php if (!empty($field->separator)): ?>
