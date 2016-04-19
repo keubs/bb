@@ -47,6 +47,7 @@
 
         // Product carousel
         if($('.field-name-uc-product-image .field-item').length > 1) {
+            // append next/prev buttons 
             $('.field-name-uc-product-image').append('<div class="cyclers"><div class="cycle-prev"><a href="#"></a></div><div class="cycle-next"><a href="#"></a></div></div>');
             $('.field-name-uc-product-image .field-items')
             .cycle({
@@ -61,52 +62,32 @@
         }
 
         // cycle through images
+        initCycle();
 
-        $('.view-store .views-row .views-field-uc-product-image').each(function(){
-            $(this).find('div.field-content').cycle({
-                slides: 'a',
-                fx: 'none',
-                speed: 1,
-                timeout: 500
-            }).cycle('pause');
-            // $(this).find('.field-content').cycle({
-            //     fx:     'none',
-            //     speed:   1,
-            //     timeout: 500
-            // }).cycle("pause");
-
-            // // Pause & play on hover
-            $(this).hover(function(){
-                $(this).find('div.field-content').addClass('active').cycle('resume');
-            }, function(){
-                $(this).find('div.field-content').removeClass('active').cycle('pause');
-            });
-        });
-
+        // listen for ajax request and adjust accordingly
         $( document ).ajaxComplete(function( event, xhr, settings ) {
-            if(settings.url == "/views/ajax") {
-                $('.view-store .views-row .views-field-uc-product-image').each(function(){
-                    $(this).find('div.field-content').cycle({
-                        slides: 'a',
-                        fx: 'none',
-                        speed: 1,
-                        timeout: 500
-                    }).cycle('pause');
-                    // $(this).find('.field-content').cycle({
-                    //     fx:     'none',
-                    //     speed:   1,
-                    //     timeout: 500
-                    // }).cycle("pause");
-
-                    // // Pause & play on hover
-                    $(this).hover(function(){
-                        $(this).find('div.field-content').addClass('active').cycle('resume');
-                    }, function(){
-                        $(this).find('div.field-content').removeClass('active').cycle('pause');
-                    });
-                });
+            if(settings.url.search(/\/views\/ajax/ > -1)) {
+                initCycle();
             }
         });
+
+
+        // function for cycling images
+        function initCycle() {
+            $('.view-store .views-row .views-field-uc-product-image').each(function(){
+                $(this).find('div.field-content').cycle({
+                    slides: 'a',
+                    fx: 'none',
+                    speed: 1,
+                    timeout: 500
+                }).cycle('pause');
+                $(this).hover(function(){
+                    $(this).find('div.field-content').addClass('active').cycle('resume');
+                }, function(){
+                    $(this).find('div.field-content').removeClass('active').cycle('pause');
+                });
+            });
+        }
 
     });
 
