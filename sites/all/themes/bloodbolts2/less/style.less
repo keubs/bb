@@ -12,6 +12,8 @@
 
 @orange: #be7900;
 @black: #1e1e1e;
+
+@screen-phone: 768px;
 #caret {
     &:after {
         content: " \203a";
@@ -75,18 +77,13 @@ header.navbar-inverse.navbar {
             padding-top: 17px;
         }
 
-        li.search-link a {
-            display: block;
-            position: relative;
-            text-indent: -288%;
-            white-space: nowrap;
+        li a.glyphicon {
+            width: 20px;
             overflow: hidden;
+            padding-right: 30px;
 
-            &:after {
-                content: "\1F50D";
-                position: absolute;
-                right: 10px;
-                bottom: 23%;
+            &:before {
+                padding-right: 20px;
             }
         }
     }
@@ -127,7 +124,7 @@ header.navbar-inverse.navbar {
 
     .views-row {
         width: 49%;
-        margin-bottom: 12px;
+        margin-bottom: 18px;
         float: left;
         overflow: hidden;
 
@@ -138,6 +135,10 @@ header.navbar-inverse.navbar {
 
         &.default {
             width: 49%;
+
+            @media(max-width: @screen-phone) {
+                width: 100%;
+            }
         }
 
         &.wide {
@@ -151,6 +152,14 @@ header.navbar-inverse.navbar {
                 &.active {
                     right: 0;
                 }
+
+                @media(max-width: @screen-phone) {
+                    position: relative;
+                    display: block;
+                    width: 100%;
+                    left: 0;
+                    top: 0;
+                }
             }
         }
 
@@ -160,7 +169,10 @@ header.navbar-inverse.navbar {
             .content-wrapper {
                 height: 40%;
             }
-            // height: 600px;
+
+            @media(max-width: @screen-phone) {
+                width: 100%;
+            }
         }
 
         .content-wrapper {
@@ -217,7 +229,7 @@ header.navbar-inverse.navbar {
                 z-index:-1;
             }
 
-            @media (max-width: 768px) {
+            @media (max-width: @screen-phone) {
                 position: relative;
                 display: block;
                 bottom: 0;
@@ -286,6 +298,14 @@ header.navbar-inverse.navbar {
         a {
             color: #FFF;
         }
+
+        @media(max-width: @screen-phone) {
+            padding-top: 30px;
+
+            span {
+                font-size: 30px !important;
+            }
+        }
     }
 
     img {
@@ -311,6 +331,19 @@ header.navbar-inverse.navbar {
         &:hover {
             color: #be7900;
         }
+
+    }
+
+    ul.nav {
+        @media(max-width: @screen-phone) {
+            width: 834px;
+            text-align: left;
+        }
+    }
+
+    @media(max-width: @screen-phone) {
+        overflow: auto;
+        margin: 0 0 0 0;
     }
 }
 
@@ -354,11 +387,19 @@ header.navbar-inverse.navbar {
     &.right {
         padding-left: 50%;
         background-position: left top;
+
+        @media(max-width: @screen-phone) {
+            padding: 50% 0 30px 0 ;
+        }
     }
 
     &.left {
         padding-right: 50%;
         background-position: right top;
+
+        @media(max-width: @screen-phone) {
+            padding: 50% 0 30px 0 ;
+        }
     }
 
     &.winter-lookbook {
@@ -369,6 +410,10 @@ header.navbar-inverse.navbar {
             background: url(images/lookbook-icon.png) no-repeat top center;
             background-position-y: 35px;
             background-size: 25%;
+
+            @media(max-width: @screen-phone) {
+                background-position-y: 55px;
+            }
         }
     }
 
@@ -380,6 +425,10 @@ header.navbar-inverse.navbar {
             background: url(images/featured-products-icon.png) no-repeat top center;
             background-position-y: 35px;
             background-size: 25%;
+
+            @media(max-width: @screen-phone) {
+                background-position-y: 55px;
+            }
         }
     }
 
@@ -390,6 +439,10 @@ header.navbar-inverse.navbar {
             background: url(images/transparency-icon.png) no-repeat top center;
             background-position-y: 55px;
             background-size: 15%;
+
+            @media(max-width: @screen-phone) {
+                background-position-y: 75px;
+            }
         }
     }
 
@@ -403,6 +456,10 @@ header.navbar-inverse.navbar {
         font-family: @futura;
         font-style: normal;
         font-weight: bold;
+
+        @media(max-width: @screen-phone) {
+            padding-top: 150px;
+        }
 
     }
     p {
@@ -421,6 +478,10 @@ header.navbar-inverse.navbar {
         text-decoration: underline;
         text-transform: uppercase;
         #caret;
+    }
+
+    @media(max-width: @screen-phone) {
+        background-size: 100%;
     }
 }
 
@@ -450,7 +511,7 @@ body.node-type-page {
     .group-top-portion {
         -webkit-column-count: 2;
         -moz-column-count: 2;
-        -webkit-column-gap: 90px;
+        -webkit-column-gap: 50px;
         -moz-column-gap: 90px;
         margin-bottom: 30px;
 
@@ -468,7 +529,7 @@ body.node-type-page {
     .field-name-field-page-category {
         .field-item {
             display: inline-block;
-            padding: 0 15px 20px 0;
+            padding: 20px 15px 20px 0;
 
             a {
                 color: #d0d0d0;
@@ -478,6 +539,10 @@ body.node-type-page {
                 }
             }
         }
+    }
+
+    h3 {
+        display: none;
     }
 }
 
@@ -848,6 +913,41 @@ body.maintenance-page {
 }
 
 /*=====  End of Maintenance Page  ======*/
+
+
+/*======================================
+=            Stockists page            =
+======================================*/
+
+.view-stockists {
+    h3 {
+        position: relative;
+        color: #000;
+        font-size: 15px;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-family: @futura;
+        font-style: normal;
+        display: inline-block;
+        padding: 20px 0;
+        &:after {
+            .line(0px, 0px);
+        }
+
+    }
+
+    a {
+        #caret;
+        color: @black;
+    }
+
+    .views-row {
+        padding: 10px 0;
+    }
+}
+
+
+/*=====  End of Stockists page  ======*/
 
 /*=====  End of Store Page  ======*/
 

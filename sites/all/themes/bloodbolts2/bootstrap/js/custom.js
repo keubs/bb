@@ -44,6 +44,10 @@
         });
 
 
+        $('.view-details-products-and-pictures .views-row .close').on('click', function(e) {
+            e.preventDefault();
+            $(this).parent().removeClass('active');
+        });
 
         // Product carousel
         if($('.field-name-uc-product-image .field-item').length > 1) {
