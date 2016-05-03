@@ -21,6 +21,21 @@
         });
 
 
+        $('.view-journal').infinitescroll({
+            navSelector: 'ul.pagination',
+            nextSelector: 'li.next a',
+            itemSelector: '.view-journal .views-row',
+            finishedMsg: '',
+            debug: true,
+        });
+
+        // $(window).unbind('.infscr');
+
+        $('.readMore').on('click', function(e){
+            e.preventDefault();
+            $(document).trigger('retrieve.infscr');
+        })
+
         // Slidein/out config for homepage view
         $('.view-journal .views-row').on('mouseenter', function(){
             $(this).find('.content-wrapper').addClass('active');
@@ -65,7 +80,7 @@
             });
         }
 
-        // cycle through images
+        // init product image cycle
         initCycle();
 
         // listen for ajax request and adjust accordingly

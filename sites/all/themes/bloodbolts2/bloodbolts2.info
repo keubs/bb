@@ -46,6 +46,7 @@ scripts[] = 'bootstrap/js/transition.js'
 scripts[] = 'bootstrap/js/custom.js'
 scripts[] = 'bootstrap/js/masonry.pkgd.min.js'
 scripts[] = 'bootstrap/js/jquery.cycle2.min.js'
+scripts[] = 'bootstrap/js/jquery.infinitescroll.js'
 
 ; Disable BootstrapCDN so the compiled LESS source files can be used.
 settings[bootstrap_cdn] = ''
