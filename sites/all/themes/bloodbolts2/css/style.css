@@ -7646,6 +7646,7 @@ header.navbar-inverse.navbar .container {
   height: 300px;
   text-align: center;
   width: 100%;
+  transition: .2s;
 }
 .view-journal .views-row .content-wrapper.active {
   bottom: 0;
@@ -8028,7 +8029,11 @@ body.node-type-page h3 {
   text-transform: uppercase;
   font-family: "futura-pt", "sans-serif";
 }
+.view-details-products-and-pictures .views-row.Product .content-wrapper {
+  display: block;
+}
 .view-details-products-and-pictures .views-row .content-wrapper {
+  display: none;
   position: absolute;
   bottom: -1000px;
   color: #1e1e1e;
@@ -8037,6 +8042,7 @@ body.node-type-page h3 {
   height: 50%;
   width: 100%;
   font-style: normal;
+  transition: .2s;
 }
 .view-details-products-and-pictures .views-row .content-wrapper.active {
   bottom: 0;
@@ -8047,6 +8053,19 @@ body.node-type-page h3 {
 }
 .view-details-products-and-pictures .views-row .views-field-sell-price {
   padding: 1em 0;
+}
+.view-details-products-and-pictures .views-row .views-field-view-node {
+  margin: 30px auto 0;
+  float: right;
+}
+.view-details-products-and-pictures .views-row .views-field-view-node a {
+  padding: 15px 20px;
+  background: #FFF;
+  color: #000;
+  text-transform: uppercase;
+}
+.view-details-products-and-pictures .views-row .views-field-view-node a:after {
+  content: " \203a";
 }
 .view-details-products-and-pictures .views-row .opaque {
   width: 100%;

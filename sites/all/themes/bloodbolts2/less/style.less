@@ -184,6 +184,7 @@ header.navbar-inverse.navbar {
             height: 300px;
             text-align: center;
             width: 100%;
+            transition: .2s;
 
             &.active {
                 bottom: 0;
@@ -600,7 +601,12 @@ body.node-type-page {
             }
         }
 
+        &.Product .content-wrapper {
+            display: block;
+        }
+
         .content-wrapper {
+            display: none;
             position: absolute;
             bottom: -1000px;
             color: @black;
@@ -609,6 +615,7 @@ body.node-type-page {
             height: 50%;
             width: 100%;
             font-style: normal;
+            transition: .2s;
 
             &.active {
                 bottom: 0;
@@ -623,6 +630,20 @@ body.node-type-page {
         .views-field-sell-price {
             padding: 1em 0;
         }
+
+        .views-field-view-node {
+            margin: 30px auto 0;
+            float: right;
+
+            a {
+                padding: 15px 20px;
+                background: #FFF;
+                color: #000;
+                text-transform: uppercase;
+                #caret;
+            }
+        }
+
         .opaque {
             width: 100%;
             height: 100%;
